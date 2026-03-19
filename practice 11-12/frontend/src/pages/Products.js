@@ -57,6 +57,16 @@ const Products = () => {
                 <div className="products-grid">
                     {products.map(product => (
                         <div key={product.id} className="product-card">
+                            <div className="product-image">
+                                <img
+                                    src={product.image}
+                                    alt={product.title}
+                                    onError={(e) => {
+                                        e.target.onerror = null;
+                                    }}
+                                />
+                            </div>
+
                             <h3>{product.title}</h3>
                             <div className="category">{product.category}</div>
                             <p>{product.description.substring(0, 100)}...</p>

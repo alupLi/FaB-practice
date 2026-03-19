@@ -11,10 +11,12 @@ const ProductForm = () => {
         title: '',
         category: '',
         description: '',
-        price: ''
+        price: '',
+        image: '' 
     });
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [previewImage, setPreviewImage] = useState('');
 
     useEffect(() => {
         if (isEdit) {
@@ -36,6 +38,10 @@ const ProductForm = () => {
             ...formData,
             [e.target.name]: e.target.value
         });
+
+        if (e.target.name === 'image') {
+            setPreviewImage(e.target.value);
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -92,6 +98,33 @@ const ProductForm = () => {
                         required
                     />
                 </div>
+
+                <div className="form-group">
+                    <label>URL изображения</label>
+                    <input
+                        type="url"
+                        name="image"
+                        value={formData.image}
+                        onChange={handleChange}
+                        placeholder="https://example.com/image.jpg"
+                    />
+                    <small>Оставьте пустым для изображения по умолчанию</small>
+                </div>
+
+                {previewImage && (
+                    <div className="form-group image-preview">
+                        <label>Предпросмотр:</label>
+                        <img
+                            src={previewImage}
+                            alt="Preview"
+                            style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain' }}
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = 'https://via.placeholder.com/300x200?text=Invalid+Image+URL';
+                            }}
+                        />
+                    </div>
+                )}
 
                 <div className="form-group">
                     <label>Описание</label>

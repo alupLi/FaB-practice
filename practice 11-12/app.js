@@ -593,7 +593,7 @@ app.delete('/api/users/:id', authMiddleware, roleMiddleware(['admin']), (req, re
  *         description: Товар успешно создан
  */
 app.post('/api/products', authMiddleware, roleMiddleware(['seller', 'admin']), (req, res) => {
-    const { title, category, description, price } = req.body;
+    const { title, category, description, price, image } = req.body;
 
     if (!title || !category || !description || price === undefined) {
         return res.status(400).json({ error: 'Все поля обязательны' });
@@ -608,6 +608,7 @@ app.post('/api/products', authMiddleware, roleMiddleware(['seller', 'admin']), (
         category,
         description,
         price,
+        image: image || 'https://avatars.mds.yandex.net/get-mpic/11722550/2a0000019aa32d8e2d8b53732afd2b09c2fe/orig',
         createdBy: req.user.sub,
         createdAt: new Date().toISOString()
     };
@@ -696,7 +697,7 @@ app.get('/api/products/:id', authMiddleware, roleMiddleware(['user', 'seller', '
  */
 app.put('/api/products/:id', authMiddleware, roleMiddleware(['seller', 'admin']), (req, res) => {
     const productId = req.params.id;
-    const { title, category, description, price } = req.body;
+    const { title, category, description, price, image } = req.body;
 
     const productIndex = products.findIndex(p => p.id === productId);
 
@@ -710,6 +711,7 @@ app.put('/api/products/:id', authMiddleware, roleMiddleware(['seller', 'admin'])
         category: category || products[productIndex].category,
         description: description || products[productIndex].description,
         price: price !== undefined ? price : products[productIndex].price,
+        image: image || products[productIndex].image,
         updatedAt: new Date().toISOString()
     };
 

@@ -51,6 +51,19 @@ const ProductDetail = () => {
             </button>
 
             <div className="product-detail">
+                {product.image && (
+                    <div className="product-detail-image">
+                        <img
+                            src={product.image}
+                            alt={product.title}
+                            style={{ maxWidth: '100%', maxHeight: '400px', objectFit: 'contain' }}
+                            onError={(e) => {
+                                e.target.onerror = null;
+                            }}
+                        />
+                    </div>
+                )}
+
                 <h1>{product.title}</h1>
                 <div className="category">Категория: {product.category}</div>
                 <div className="price">{product.price} ₽</div>
