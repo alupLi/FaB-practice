@@ -11,11 +11,8 @@
 - [Функционал](#функционал)
 - [Роли и права доступа](#роли-и-права-доступа)
 - [API Endpoints](#api-endpoints)
-- [Установка](#установка)
-- [Запуск](#запуск)
 - [Структура проекта](#структура-проекта)
-- [Учётные данные по умолчанию](#учётные-данные-по-умолчанию)
-- [Практические занятия](#практические-занятия)
+- [Скриншоты](#скриншоты)
 
 ---
 
@@ -140,3 +137,43 @@
 | POST | `/api/products` | Создать товар | Seller/Admin |
 | PUT | `/api/products/:id` | Обновить товар | Seller/Admin |
 | DELETE | `/api/products/:id` | Удалить товар | Admin |
+
+
+## 🏗️ Структура проекта
+
+```
+practice 11-12/
+├── frontend/                # Frontend на React
+│ ├── public/
+│ ├── src/
+│ │ ├── components/          # React компоненты
+│ │ │ └── Navigation.js
+│ │ ├── pages/               # Страницы приложения
+│ │ │ ├── Login.js
+│ │ │ ├── Register.js
+│ │ │ ├── Products.js
+│ │ │ ├── ProductDetail.js
+│ │ │ ├── ProductForm.js
+│ │ │ └── Users.js
+│ │ ├── services/            # API сервисы
+│ │ │ └── api.js
+│ │ ├── App.css
+│ │ └── App.js               # Корневой компонент
+│ ├── package.json           # Зависимости клиента
+│ └── README.md
+├── app.js                   # Backend на Node.js + Express
+├── package.json             # Зависимости сервера
+├── README.md
+└── .gitignore
+```
+
+## 📸 Скриншоты
+
+### 1. Страница входа
+![Страница входа](screenshots/login.png)
+
+### 2. Страница с товарами
+![Страница с товарами](screenshots/products.png)
+
+### 3. Управление пользователями
+![Управление пользователями](screenshots/users.png)
