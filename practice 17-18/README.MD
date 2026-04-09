@@ -32,8 +32,8 @@
 ├── manifest.json # PWA манифест
 ├── package.json # Зависимости проекта
 ├── content/
-│ ├── home.html
-│ └── about.html
+│   ├── home.html
+│   └── about.html
 └── icons/
 	├── favicon.ico
 	├── favicon-16x16.png
