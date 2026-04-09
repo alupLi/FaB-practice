@@ -148,12 +148,14 @@ npm install express socket.io web-push body-parser cors
 
 ## Реализованные практические задания
 
-- ПЗ №13-14: PWA, Service Worker, кэширование
+- ПЗ №13: Service Worker
 
-- ПЗ №15: WebSocket (Socket.IO)
+- ПЗ №14: Web App Manifest
 
-- ПЗ №16: Push-уведомления, VAPID
+- ПЗ №15: HTTPS + App Shell
 
-- ПЗ №17: Напоминания, кнопка "Отложить"
+- ПЗ №16: WebSocket + Push
+
+- ПЗ №17: Детализация Push
 
 - ПЗ №18: Тестирование, README
