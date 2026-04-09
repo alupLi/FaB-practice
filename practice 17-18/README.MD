@@ -138,7 +138,11 @@ npm install express socket.io web-push body-parser cors
 
 ### 7. Сообщения в консоли браузера
 
-![Консоль браузера](screenshots/console-logs.png)
+![Консоль браузера](screenshots/browser-console-log.png)
+
+### 8. Логи сервера
+
+![Логи сервера](screenshots/console-logs.png)
 
 ---
 
