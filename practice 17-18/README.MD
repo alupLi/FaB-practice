@@ -32,17 +32,17 @@
 ├── manifest.json # PWA манифест
 ├── package.json # Зависимости проекта
 ├── content/
-│ ├── home.html # Шаблон главной страницы
-│ └── about.html # Шаблон страницы "О приложении"
-└── icons/ # Иконки для PWA и уведомлений
-├── favicon.ico
-├── favicon-16x16.png
-├── favicon-32x32.png
-├── favicon-48x48.png
-├── favicon-64x64.png
-├── favicon-128x128.png
-├── favicon-256x256.png
-└── favicon-512x512.png
+│ ├── home.html
+│ └── about.html
+└── icons/
+	├── favicon.ico
+	├── favicon-16x16.png
+	├── favicon-32x32.png
+	├── favicon-48x48.png
+	├── favicon-64x64.png
+	├── favicon-128x128.png
+	├── favicon-256x256.png
+	└── favicon-512x512.png
 ```
 
 ---
