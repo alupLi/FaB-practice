@@ -1,0 +1,26 @@
+{
+  "name": "graphql-books-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "GraphQL API для управления каталогом книг",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "books",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "graphql": "^16.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
