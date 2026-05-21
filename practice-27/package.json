@@ -1,0 +1,25 @@
+{
+  "name": "rabbitmq-task-processor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Асинхронная обработка задач с RabbitMQ",
+  "main": "producer.js",
+  "scripts": {
+    "setup": "node setup-queues.js",
+    "producer": "node producer.js",
+    "consumer": "node consumer.js",
+    "consumer2": "set WORKER_ID=2 && node consumer.js",
+    "consumer3": "set WORKER_ID=3 && node consumer.js",
+    "dlq-consumer": "node dlq-consumer.js",
+    "test": "node test-client.js",
+    "check": "node check-rabbitmq.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "dotenv": "^16.3.1",
+    "express": "^4.22.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
